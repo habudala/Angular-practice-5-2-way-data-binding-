@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title></title>
+</head>
+<body ng-controller="myController">
+	<!-- <div >
+		 Message: {{message}}
+	</div>
+	<br></br> -->
+	<!-- Essentially this allows us two-way data binding. When the "view" is modified via the input box, the model changes as well in the js file,and vice versa  -->
+
+	<!-- <div >
+		 <input type="text" ng-model="message"/>
+	</div> -->
+
+
+
+
+
+	<!-- ALSO if I were to specify a different model that doesn't even exist or is specified in the model back in the js file, Angular will still create it, and will memorize and store it for me so if I use the data binding expression with the same (non-existent) name (like bellow) it'll still display it  -->
+
+	<!-- <div>
+		 <input type="text" ng-model="greeting"/>
+	</div>
+
+	{{greeting}} -->
+
+
+
+
+	<!-- yet another example with two-way data binding, except a bit more complex.The upper table lets me modify the contents of the lower table -->
+	<table>
+		<tr>
+			<td>First Name:</td>
+			<td><input type="text" ng-model="employee.firstName"/></td>
+			
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><input type="text" ng-model="employee.lastName"/></td>
+			
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td><input type="text" ng-model="employee.gender"/></td>
+			
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+			<td>First Name:</td>
+			<td>{{employee.firstName}}</td>
+			
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td>{{employee.lastName}}</td>
+			
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td>{{employee.gender}}</td>
+			
+		</tr>
+	</table>
+
+
+	
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src=scripts/script.js></script>
+</body>
+</html>
