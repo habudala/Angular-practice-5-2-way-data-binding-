@@ -20,7 +20,7 @@ variable.controller("myController", function($scope){
 
 
 	//Let's work with some more complex data types than just a message... objects for instance!
-	var employee = {firstName: "Ben", lastName: "Hastings", gender: "Male"};
+	var employee = {firstName: "Laszlo", lastName: "Habuda", gender: "Male"};
 
 	$scope.employee = employee;
 
